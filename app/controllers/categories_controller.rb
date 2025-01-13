@@ -13,9 +13,11 @@ class CategoriesController < ApplicationController
 
   def create
     @category = Category.new(category_params)
-    @category.save
-
-    redirect_to categories_path(@category)
+    if @category.save
+      redirect_to categories_path(@category)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
