@@ -1,0 +1,11 @@
+<h1><%= "#{@category.name}" %></h1>
+
+<ul>
+  <% @category.bookmarks.each do |bookmark| %>
+    <img src="<%=bookmark.recipe.image_url %>" alt="<% bookmark.recipe.name %> image" />
+    <li><%= bookmark.recipe.name %></li>
+    <li><%= bookmark.recipe.description %></li>
+    <li><%= bookmark.recipe.rating %></li>
+  <% end %>
+
+</ul>
