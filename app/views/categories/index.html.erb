@@ -1,6 +1,17 @@
-<h1>Categories</h1>
-<ul>
+<div class="banner">
+  <div class="container">
+    <h1>Cookbook</h1>
+    <p>Save your favourite recipes</p>
+  </div>
+</div>
+
+<div class="title">
+  <h2>Your Categories:</h2>
+</div>
+<div class="category-card">
   <% @categories.each do |category| %>
-  <li><%= link_to "#{category.name}", category_path(category) %></li>
+  <div class="category" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3)),url('<%= category.img_url %>');">
+    <li><%= link_to "#{category.name}", category_path(category), class: "category-link" %></li>
+  </div>
   <% end %>
-</ul>
+</div>

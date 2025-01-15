@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_01_13_092846) do
+ActiveRecord::Schema[7.1].define(version: 2025_01_14_113939) do
   create_table "bookmarks", force: :cascade do |t|
     t.text "comment"
     t.integer "recipe_id", null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2025_01_13_092846) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "img_url"
   end
 
   create_table "recipes", force: :cascade do |t|
