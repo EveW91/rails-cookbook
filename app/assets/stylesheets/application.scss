@@ -1,11 +1,8 @@
-
-// components
+@import "font-awesome";
 @import "components/index";
-
-// pages
 @import "pages/index";
-
 @import "category/show";
+@import "category/new";
 
 body {
   background-color: #EFE9F4;
